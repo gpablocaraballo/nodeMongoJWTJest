@@ -99,13 +99,13 @@ _10 . Blocked users list_
 GET http://localhost:8080/admin/blockedpublishers -> header Authorization: token
 ``` 
 
-_8 . Block author_
+_11 . Block author_
 
 ```
 POST http://localhost:8080/admin/blockauthor/{userId} -> header Authorization: token
 ``` 
 
-_8 . Delete user_
+_12 . Delete user_
 
 ```
 DELETE http://localhost:8080/admin/remove/61a084af23c88528b0cd29f2 -> header Authorization: token
