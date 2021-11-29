@@ -1,7 +1,7 @@
 # node + mongodb + auth jwt + integration testing
-Nodejs example working with mongoose, jwt for auth and jest for testing_
-This project are using mongodb-memory-server for integration test_
-Also i used supertest and tools like nodemon_
+Nodejs example working with mongoose, jwt for auth and jest for testing. 
+This project are using mongodb-memory-server for integration test. 
+Also i used supertest and tools like nodemon.
 
 ### INSTRUCTIONS STEPS 📋
 
