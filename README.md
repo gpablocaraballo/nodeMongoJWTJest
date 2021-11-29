@@ -120,11 +120,12 @@ _Models: This demo use this models schemas: Book (author reference an user), Use
 
 _Authorization and permissions: The login store jwt for auth, also there are some actions that only can perform a superAdmin user with the flag set true_
 
-_TESTING: You can try some testing stuff using jest, simple run -> npm run test for testing i use mongodb-memory-server jest and  supertest_
+_TESTING: You can try some testing stuff using jest, simple run -> npm run test_
+_Database for testing: For testing i use mongodb-memory-server jest and supertest to consume the endpoints_
 
 _TESTING files: Inside src/__tests__/index.test.js_
 
 _POSTMAN: Inside this project there is a postman file, you can import that file into POSTMAN app.
-The file is: ChallengePostman.postman_collection.json_
+The file name is: ChallengePostman.postman_collection.json_
 
 _SCRIPTS ENVIRONMENTS VARIABLES: Needed mainly in windows also this project use cross-env package_
