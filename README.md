@@ -36,7 +36,7 @@ npm run test
 ``` 
 
 ### ENDPOINTS 📋
-### USE ChallengePostman.postman_collection.json IF YOU WANT 📋
+### You can use ChallengePostman.postman_collection.json if you want
 
 _1 . Register an user_
 
