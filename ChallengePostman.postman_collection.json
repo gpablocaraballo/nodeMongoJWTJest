@@ -1,0 +1,517 @@
+{
+	"info": {
+		"_postman_id": "752161da-185d-429d-b16a-4ffb70448b7f",
+		"name": "ChallengePostman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "STEP 1 user register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "A1234567a;",
+							"type": "text"
+						},
+						{
+							"key": "pseudonym",
+							"value": "A see all",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 2 auth login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "A1234567a;",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 2 login as Darth Vader",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "anakin",
+							"description": "(is darth vader!)\n",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "A1234567a;",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 2 login as superadmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "superadmin",
+							"description": "(is darth vader!)\n",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "A1234567a;",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 3 user detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjp7InVzZXJJZCI6IjYxYTQyMjliOTYxZTc1NGRlYzk1ZDE0MCIsInVzZXJuYW1lIjoidXNlcjEiLCJwc2V1ZG9ueW0iOiJBIHNlZSBhbGwiLCJzdXBlckFkbWluIjpmYWxzZX0sImlhdCI6MTYzODE0NzI4MywiZXhwIjoxNjM4MTgzMjgzfQ.3FeDd9n6V7ubrTLhBOcFB1Okn-iPDGhHtlmHtyJtlQM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/detail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 4 update pseudonym",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjp7InVzZXJJZCI6IjYxYTQyMjliOTYxZTc1NGRlYzk1ZDE0MCIsInVzZXJuYW1lIjoidXNlcjEiLCJwc2V1ZG9ueW0iOiJBIHNlZSBhbGwiLCJzdXBlckFkbWluIjpmYWxzZX0sImlhdCI6MTYzODE0NzI4MywiZXhwIjoxNjM4MTgzMjgzfQ.3FeDd9n6V7ubrTLhBOcFB1Okn-iPDGhHtlmHtyJtlQM",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "pseudonym",
+							"value": "Hello 1",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 5 user publish",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjp7InVzZXJJZCI6IjYxYTQyMjliOTYxZTc1NGRlYzk1ZDE0MCIsInVzZXJuYW1lIjoidXNlcjEiLCJwc2V1ZG9ueW0iOiJBIHNlZSBhbGwiLCJzdXBlckFkbWluIjpmYWxzZX0sImlhdCI6MTYzODE0NzI4MywiZXhwIjoxNjM4MTgzMjgzfQ.3FeDd9n6V7ubrTLhBOcFB1Okn-iPDGhHtlmHtyJtlQM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "ecma for dummies",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "new book and old",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "cover",
+							"value": "https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/publish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"publish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 6 user unpublish",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjp7InVzZXJJZCI6IjYxYTQyMjliOTYxZTc1NGRlYzk1ZDE0MCIsInVzZXJuYW1lIjoidXNlcjEiLCJwc2V1ZG9ueW0iOiJBIHNlZSBhbGwiLCJzdXBlckFkbWluIjpmYWxzZX0sImlhdCI6MTYzODE0NzI4MywiZXhwIjoxNjM4MTgzMjgzfQ.3FeDd9n6V7ubrTLhBOcFB1Okn-iPDGhHtlmHtyJtlQM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/unpublish/61a4254c86260b1a7807d99a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"unpublish",
+						"61a4254c86260b1a7807d99a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 7 book list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/book/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"list"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "some",
+							"description": "Type some value in the q query param to filter by title or description\n",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 8 book detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/book/detail?id=61a4252786260b1a7807d998",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "61a4252786260b1a7807d998"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TEST book XML",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"description": "If you use Content-Type then on post verb cant use payload application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/book/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP extra user list (only superadmin)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjp7InVzZXJJZCI6IjYxYTMxMDBhOTc3NWYzNDQ0MDAxOGZkNSIsInVzZXJuYW1lIjoic3VwZXJhZG1pbiIsInBzZXVkb255bSI6IkEgc2VlIGFsbCIsInN1cGVyQWRtaW4iOnRydWV9LCJpYXQiOjE2MzgxMjEzNTMsImV4cCI6MTYzODE1NzM1M30.NNnjiDYCUswtc7vZURHoUMlZNPBMRCF3GuKZ-e6lGcA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/admin/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP extra list of blocked publishers (only superadmin)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjp7InVzZXJJZCI6IjYxYTMxMDBhOTc3NWYzNDQ0MDAxOGZkNSIsInVzZXJuYW1lIjoic3VwZXJhZG1pbiIsInBzZXVkb255bSI6IkEgc2VlIGFsbCIsInN1cGVyQWRtaW4iOnRydWV9LCJpYXQiOjE2MzgxMjEzNTMsImV4cCI6MTYzODE1NzM1M30.NNnjiDYCUswtc7vZURHoUMlZNPBMRCF3GuKZ-e6lGcA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/admin/blockedpublishers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"blockedpublishers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP extra block author (only superadmin)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjp7InVzZXJJZCI6IjYxYTMxMDBhOTc3NWYzNDQ0MDAxOGZkNSIsInVzZXJuYW1lIjoic3VwZXJhZG1pbiIsInBzZXVkb255bSI6IkEgc2VlIGFsbCIsInN1cGVyQWRtaW4iOnRydWV9LCJpYXQiOjE2MzgxMjg4MzMsImV4cCI6MTYzODE2NDgzM30.cdjFRRMm9Vuha9fS_ViEeJLUKYoJC7yrR4qmBUvUyqo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/admin/blockauthor/61a269897c6a80242083887d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"blockauthor",
+						"61a269897c6a80242083887d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP extra remove regular user (only superadmin)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjp7InVzZXJJZCI6IjYxYTMxMDBhOTc3NWYzNDQ0MDAxOGZkNSIsInVzZXJuYW1lIjoic3VwZXJhZG1pbiIsInBzZXVkb255bSI6IkEgc2VlIGFsbCIsInN1cGVyQWRtaW4iOnRydWV9LCJpYXQiOjE2MzgxMjg4MzMsImV4cCI6MTYzODE2NDgzM30.cdjFRRMm9Vuha9fS_ViEeJLUKYoJC7yrR4qmBUvUyqo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/admin/remove/61a084af23c88528b0cd29f2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"remove",
+						"61a084af23c88528b0cd29f2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "challenge-node",
+  "version": "1.0.0",
+  "description": "challenge Node API",
+  "main": "challenge-api.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.25",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "jest": "^27.3.1",
+    "mongodb-memory-server": "^8.0.3",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "dev": "nodemon ./challenge-api.js",
+    "start": "node ./challenge-api.js",
+    "test": "cross-env NODE_ENV=test jest --verbose --watchAll --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gpablocaraballo"
+  },
+  "author": "GCar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gpablocaraballo"
+  },
+  "homepage": "https://github.com/gpablocaraballo"
+}
