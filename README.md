@@ -8,7 +8,7 @@ Also i used supertest and tools like nodemon.
 _1 . Clone the github repo_
 
 ```
-git clone https://github.com/developergit001/nodeMongoJWTJest.git
+git clone https://github.com/gpablocaraballo/nodeMongoJWTJest.git
 ```
 
 _2 . Enter inside the directory app_
@@ -102,7 +102,7 @@ GET http://localhost:8080/admin/blockedpublishers -> header Authorization: token
 _8 . Block author_
 
 ```
-POST http://localhost:8080/admin/blockauthor/{userId}} -> header Authorization: token
+POST http://localhost:8080/admin/blockauthor/{userId} -> header Authorization: token
 ``` 
 
 _8 . Delete user_
@@ -115,6 +115,10 @@ DELETE http://localhost:8080/admin/remove/61a084af23c88528b0cd29f2 -> header Aut
 
 _Cloud mongoDb: This demo is working with a cloud data base, you can check the conection info in .env 
 and also in libs/config.js)_
+
+_Models: This demo use this models schemas: Book (author reference an user), User and BlockedPublishers for blocked users list, you can find the models in /models/ _
+
+_Authorization and permissions: The login store jwt for auth, also there are some actions that only can perform a superAdmin user with the flag set true_
 
 _TESTING: You can try some testing stuff using jest, simple run -> npm run test for testing i use mongodb-memory-server jest and  supertest_
 
