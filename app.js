@@ -6,6 +6,7 @@ const booksEndpoints  = require( './routes/book' );
 const usersEndpoints  = require( './routes/user' );
 const authEndpoints  = require( './routes/auth' );
 const adminEndpoints  = require( './routes/admin' );
+const emailEndpoints  = require( './routes/email' );
 const app = express();
 
 app.use( bodyParser.urlencoded( { extended:false } ) );
@@ -41,4 +42,5 @@ app.use('/book', booksEndpoints);
 app.use('/user', usersEndpoints);
 app.use('/auth', authEndpoints);
 app.use('/admin', adminEndpoints);
+app.use('/email', emailEndpoints);
 module.exports = app;
